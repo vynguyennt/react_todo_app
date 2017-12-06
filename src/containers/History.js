@@ -19,7 +19,7 @@ class History extends Component {
 	render() {
 		let history = this.state.history.map((row, index) => {
    			return (
-   				<tr>
+   				<tr key={index}>
 					<th scope="row">{row.index}</th>
 					<td>{row.title}</td>
 					<td>{row.description}</td>

@@ -41,6 +41,11 @@ class Home extends Component {
 		//call search function to restore current search of user
 		this.searchTodos(this.state.searchText);
 
+		//update allCompleted status
+		if(this.state.allCompleted === true) {
+			this.setState({allCompleted: false});
+		}
+
 		//save new history
 		const history = JSON.parse(localStorage.getItem('history')).slice(0);
 		let newHistory = history.concat({
@@ -82,6 +87,11 @@ class Home extends Component {
 			localStorage.setItem('todos', JSON.stringify(todos));
 			//call search function to restore current search of user
 			this.searchTodos(this.state.searchText);
+
+			//update allCompleted status
+			if(this.state.allCompleted === true && todos.length == 0) {
+				this.setState({allCompleted: false});
+			}
 		} else {
 			//show error if item is incompleted
 			this.openModal('Please mark this task as completed before deleting it.');
@@ -223,6 +233,11 @@ class Home extends Component {
 		localStorage.setItem('todos', JSON.stringify(newTodos));
 		//call search function to restore current search of user
 		this.searchTodos(this.state.searchText);
+
+		//update allCompleted status
+		if(this.state.allCompleted === true && newTodos.length == 0) {
+			this.setState({allCompleted: false});
+		}
 	}
 	//count number of incompleted item
 	countIncompletedTodo() {
