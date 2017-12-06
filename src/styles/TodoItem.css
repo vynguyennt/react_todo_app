@@ -1,0 +1,125 @@
+.todo-item {
+    text-align: left;
+    background: #fff;
+    margin: 15px 0;
+    line-height: 1.2;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.todo-item form input, .todo-item form button, .todo-item .created-date, .todo-item .modified-date {
+    display: none;
+}
+
+.todo-item form .show-edit input {
+    display: block;
+    outline: 0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.todo-item form .show-edit p {
+    display: none;
+}
+
+.todo-item input[type=checkbox] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.todo-item form {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: calc(100% - 70px);
+}
+
+.todo-item .title {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.todo-item .description {
+    font-size: 0.8em;
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.todo-item .delete-btn {
+    background: #ccc;
+    border: none;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    border-radius: 50%;
+    color: #fff;
+    width: 21px;
+    height: 21px;
+    line-height: 18px;
+    display: none;
+    cursor: pointer;
+    outline: 0;
+    box-shadow: none;
+}
+
+.todo-item .delete-btn span {
+    margin-left: -1px;
+}
+
+.todo-item:hover .delete-btn {
+	display: block;
+}
+
+.todo-item .show-hide-btn {
+    border: 0;
+    border-right: solid 2px #9c9c9c;
+    border-bottom: solid 2px #9c9c9c;
+    border-radius: 0;
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    right: 50px;
+    top: 24px;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: none;
+    background: none;
+}
+
+.todo-item.hide .show-hide-btn {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+.todo-item.show .show-hide-btn {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+
+.todo-item.show .created-date, .todo-item.show .modified-date {
+    display: block;
+    font-size: 0.8em;
+    color: #888;
+    margin: 10px 0 0 29px;
+}
+
+.todo-item.show .description {
+    white-space: normal;
+}
+
+.todo-item.completed .title {
+    text-decoration: line-through;
+    color: #666;
+}

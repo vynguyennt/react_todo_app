@@ -1,0 +1,132 @@
+/*Add form css*/
+.add-form {
+	position: relative;
+    background: #fff;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 45px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.add-form .form-groups {
+	display: none;
+    vertical-align: top;
+    padding: 10px 0 0 15px;
+    width: calc(100% - 45px);
+}
+
+.add-form.active .form-groups {
+	display: inline-block;
+}
+
+.add-form input[type=text] {
+    border: 0;
+    border-radius: 20px;
+    outline: 0;
+    padding: 10px 20px;
+    background: #cbe2d8;
+}
+
+.add-form button {
+	display: inline-block;
+    background: 0;
+    border: 0;
+    font-size: 40px;
+    color: #9c9c9c;
+    width: 45px;
+    height: 45px;
+    padding: 0 10px 10px;
+    line-height: 40px;
+    outline: 0 !important;
+    cursor: pointer;
+}
+
+.add-form button:hover {
+	color: #444;
+}
+
+.add-form .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.add-form.active .overlay{
+	display: none;
+}
+
+/*Search form css*/
+.search-form {
+	position: relative;
+    background: #fff;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    width: 45px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.search-form .form-group {
+	margin-bottom: 0;
+    width: calc(100% - 55px);
+    display: none;
+}
+
+.search-form.active .form-group {
+	display: inline-block;
+}
+
+.search-form input[type=text] {
+	border: 0;
+    border-radius: 20px;
+    outline: 0;
+    padding: 10px 20px;
+    width: calc(100% - 30px);
+    background: none;
+}
+
+.search-form button {
+	display: inline-block;
+    background: 0;
+    border: 0;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+/*Common css for 2 forms*/
+.search-form button:hover, .search-form button:focus, .search-form button:active, 
+.add-form button:hover, .add-form button:focus, .add-form button:active {
+	outline: 0;
+	background: 0;
+	border: 0;
+	box-shadow: none;
+}
+
+.search-form button img {
+	margin: -5px;
+}
+
+.add-form:hover, .search-form:hover {
+	background: #b7dccb;
+}
+
+.add-form.active, .search-form.active {
+	width: calc(100% - 55px);
+	background: #fff !important;
+}
+
+/*Mark all completed checkbox css*/
+.mark-all-chb {
+	margin-left: 20px;
+}

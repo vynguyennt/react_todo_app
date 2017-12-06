@@ -1,0 +1,38 @@
+.Modal {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 5px;
+    color: #444;
+    border: solid 1px #ddd;
+    padding: 20px;
+}
+
+.Overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+button.close {
+	background: 0;
+    border: 0;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: #9c9c9c;
+    outline: 0;
+    box-shadow: none;
+    font-weight: normal;
+}

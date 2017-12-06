@@ -1,0 +1,16 @@
+.status-bar .float-left {
+    padding: 5px 20px;
+}
+
+.status-bar .float-right {
+	background: #b7dccb;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    outline: 0;
+    box-shadow: none;
+}
+
+.status-bar .float-right:hover {
+	background: #fff;
+}
