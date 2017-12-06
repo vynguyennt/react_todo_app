@@ -170,6 +170,12 @@ class Home extends Component {
 
 			localStorage.setItem('history', JSON.stringify(history.concat(newHistory)));
 		}
+
+		let newAllCompleted = true;
+		for (let i = 0; i < newTodos.length; i++) {
+			if(newTodos[i].completed === false) newAllCompleted = false;
+		}
+		this.setState({allCompleted: newAllCompleted});
 	}
 	//update title/description of item
 	updateDetails(index, title, description) {
