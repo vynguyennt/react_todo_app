@@ -15,6 +15,12 @@ class Home extends Component {
 		} else {
 			localStorage.setItem('todos', JSON.stringify(todos));
 		}
+
+		//get initiate history list
+		if(JSON.parse(localStorage.getItem('history')) === null) {
+			let history = [];
+			localStorage.setItem('history', JSON.stringify(history));
+		}
 		
 		this.state = {
 			todos: todos,

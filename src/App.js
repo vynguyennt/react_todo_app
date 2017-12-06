@@ -15,10 +15,12 @@ class App extends Component {
     if(JSON.parse(localStorage.getItem('todos')) === null) {
       let todos = [];
       localStorage.setItem('todos', JSON.stringify(todos));
-    }    
+    }
+
+    // get initiate history list from localStorage
     if(JSON.parse(localStorage.getItem('history')) === null) {
       let history = [];
-      localStorage.setItem('todos', JSON.stringify(history));
+      localStorage.setItem('history', JSON.stringify(history));
     }
   }
   render() {
