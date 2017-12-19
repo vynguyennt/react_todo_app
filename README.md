@@ -3,6 +3,7 @@ This project is developed using ReactJS and Bootstrap 4.
 This project is started using 'create-react-app', this is the default start project of React, refer here for more information: https://reactjs.org/docs/installation.html#creating-a-new-application.
 All code was written by Vy Nguyen.
 
+View DEMO: https://todo-app-vynguyen.herokuapp.com/
 
 To start project:
 - cd to 'todo-app' folder
